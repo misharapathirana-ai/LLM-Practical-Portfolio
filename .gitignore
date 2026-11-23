@@ -1,0 +1,5 @@
+sentiment labelled sentences/
+__pycache__/
+.ipynb_checkpoints/
+rag_env/
+.env
