@@ -1,5 +1,4 @@
-﻿"""app.py - Streamlit chat window with PDF upload. Run with: streamlit run app.py"""
-from pathlib import Path
+﻿from pathlib import Path
 
 import streamlit as st
 
@@ -12,19 +11,17 @@ st.set_page_config(page_title="University Knowledge Assistant")
 st.title("University Knowledge Assistant")
 st.caption(f"Local RAG: {rag.LLM_MODEL} + {rag.EMBED_MODEL} + ChromaDB")
 
-# ---- Sidebar: upload extra PDFs ----
 with st.sidebar:
     st.header("Add documents")
     uploaded = st.file_uploader("Upload PDF files", type="pdf", accept_multiple_files=True)
     if st.button("Add to knowledge base") and uploaded:
         for file in uploaded:
             save_path = DATA_DIR / file.name
-            save_path.write_bytes(file.getbuffer())          # keep a copy in data/
+            save_path.write_bytes(file.getbuffer())          
             with st.spinner(f"Reading {file.name}..."):
                 pages, chunks = rag.add_pdf(save_path)
             st.success(f"{file.name}: {pages} pages, {chunks} chunks added")
 
-# ---- Chat history (Streamlit reruns the script on every action, so we store it in session_state) ----
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
