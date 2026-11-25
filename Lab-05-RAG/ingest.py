@@ -1,4 +1,3 @@
-﻿"""ingest.py - build the vector database from every PDF in the data/ folder."""
 import shutil
 from pathlib import Path
 
@@ -7,7 +6,7 @@ import rag_pipeline as rag
 DATA_DIR = Path("data")
 
 if Path(rag.DB_DIR).exists():
-    shutil.rmtree(rag.DB_DIR)          # start fresh so re-running never creates duplicates
+    shutil.rmtree(rag.DB_DIR)          
 
 pdfs = sorted(DATA_DIR.glob("*.pdf"))
 if not pdfs:
