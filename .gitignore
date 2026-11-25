@@ -7,3 +7,4 @@ rag_env/
 .venv/
 Lab-05-RAG/chroma_db/
 Lab-05-RAG/data/
+Lab-06-Agents/memory.db
