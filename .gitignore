@@ -5,3 +5,5 @@ rag_env/
 .env
 .venv/
 .venv/
+Lab-05-RAG/chroma_db/
+Lab-05-RAG/data/
