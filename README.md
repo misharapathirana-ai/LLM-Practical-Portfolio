@@ -6,3 +6,4 @@ PUSL3205 Large Language Models and Generative AI
 
 (More labs will be added as they are completed.)
 - [Lab 05 - RAG Architecture](Lab-05-RAG/README.md)
+- [Lab 06 - AI Agents](Lab-06-Agents/README.md)
