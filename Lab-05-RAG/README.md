@@ -50,3 +50,9 @@ TODO: add screenshots from `screenshots/` and the extra test questions.
 - How ingestion, embedding, retrieval and generation fit together in RAG
 - Why chunk size and overlap affect what the model can see
 - How a prompt rule reduces unsupported answers but does not guarantee correctness
+
+## Screenshots
+![Ingestion](screenshots/01-ingest.png)
+![Answer with sources](screenshots/02-answer-with-sources.png)
+![Refusal](screenshots/03-refusal.png)
+![PDF upload](screenshots/04-upload.png)
