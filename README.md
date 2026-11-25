@@ -5,3 +5,4 @@ PUSL3205 Large Language Models and Generative AI
 - [Lab 01 - Sentiment Analysis (Traditional ML)](Lab-01-Machine-Learning/README.md)
 
 (More labs will be added as they are completed.)
+- [Lab 05 - RAG Architecture](Lab-05-RAG/README.md)
