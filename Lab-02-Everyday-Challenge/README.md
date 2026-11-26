@@ -23,7 +23,7 @@ I was absent on the day groups were formed and was not assigned one, so I comple
 
 3. **Developing the concept:** the LLM wrote the concept, target user, features and weaknesses for option B. I reviewed it and approved it.
 4. **Mock-up:** the LLM generated the three screens as an SVG image.
-5. **My own changes:** TODO (write what you changed, added or removed, even if small, for example the name, a feature, a worry you raised).
+5. **My own changes:** I did not change the concept. I read the options, the features and the limitations, and approved it as proposed. My own decisions were to do the lab individually, to let the LLM choose the problem, and to go with option B (the app with an optional pouch kit) over the smart backpack and the locker network.
 
 ## The product: LightLoad
 **One line:** every morning, LightLoad reads your timetable and tells you what to bring today, what to leave behind, and how heavy your bag will be.
@@ -60,9 +60,11 @@ The screens show today's pack with a weight summary, the bag weight breakdown, a
 - Its suggestions were safe and familiar. The ideas came from common patterns, so the originality has to come from me.
 - It stated assumptions confidently (for example that lecturers upload PDFs to Moodle) that I would need to check with real students.
 - The mock-up is only as good as my review of it, since a generated design can look polished while hiding usability problems.
-- TODO: add one or two observations of your own.
+- I approved the concept without testing any of its assumptions, for example that students would enter a timetable or that lecturers share material as PDFs. The concept is only as reliable as those assumptions, and the next step would be asking a few students.
+- Working alone, there was no teammate to challenge the idea, so the limitations section is where the doubts have to be raised.
 
 ## Learning Outcomes
 - How to use an LLM for structured brainstorming, option comparison and drafting a product concept
 - How to judge LLM output critically instead of accepting it, including which parts are assumptions
 - How to write a product concept with a target user, features and honest limitations
+
