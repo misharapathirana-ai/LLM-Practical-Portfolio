@@ -11,7 +11,7 @@ Fine-tune a small instruction-tuned model with LoRA on a small question-and-answ
 - GPU: Tesla T4, 14.6 GB memory. A GPU is needed because training is millions of matrix multiplications, and a GPU runs thousands of them in parallel while a CPU runs only a few
 - Model: `Qwen/Qwen2.5-0.5B-Instruct` (about 0.5 billion parameters)
 - Libraries: transformers, datasets, peft, trl, accelerate, bitsandbytes
-- Notebook: [notebook/Lab04_LoRA_Finetuning.ipynb](notebook/Lab04_LoRA_Finetuning.ipynb)
+- Notebook: [notebooks/Lab04_LoRA_Finetuning.ipynb](notebooks/Lab04_LoRA_Finetuning.ipynb)
 
 ## Implementation
 - **Dataset:** 36 question-and-answer pairs about "ByteHub Computers", a fictional computer shop (opening hours, warranty, delivery, repairs, payment). All the facts are invented, so the original model cannot know them
@@ -62,3 +62,4 @@ Full outputs: [lab04_results.csv](lab04_results.csv)
 ## Screenshots
 ![comparison table](screenshots/comparison%20table.png)
 ![loss curve](screenshots/loss%20curve.png)
+

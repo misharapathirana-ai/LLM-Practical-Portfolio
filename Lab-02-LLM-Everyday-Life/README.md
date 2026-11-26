@@ -43,7 +43,7 @@ I was absent on the day groups were formed and was not assigned one, so I comple
 **Where the LLM is used:** turning the timetable, assignments and weather into a plain-language packing decision with reasons, and handling odd cases such as a group meeting followed by the gym.
 
 ## Visual prototype
-![LightLoad mock-up](mockups/lightload_screens.svg)
+![LightLoad mock-up](screenshots/lightload_screens.svg)
 
 The screens show today's pack with a weight summary, the bag weight breakdown, and the leave-it-behind suggestions. They are static mock-ups, not a working app.
 
@@ -67,4 +67,5 @@ The screens show today's pack with a weight summary, the bag weight breakdown, a
 - How to use an LLM for structured brainstorming, option comparison and drafting a product concept
 - How to judge LLM output critically instead of accepting it, including which parts are assumptions
 - How to write a product concept with a target user, features and honest limitations
+
 

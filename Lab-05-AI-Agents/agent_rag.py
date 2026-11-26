@@ -7,7 +7,7 @@ from langchain_core.tools import tool
 from agent_memory import build_agent, chat_loop, init_db, search_memory
 from agent_tools import calculator
 
-RAG_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Lab-05-RAG"))
+RAG_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Lab-05-RAG-Pipeline"))
 sys.path.append(RAG_DIR)
 import rag_pipeline as rag
 
@@ -32,3 +32,4 @@ SYSTEM_PROMPT = (
 if __name__ == "__main__":
     init_db()
     chat_loop(build_agent([calculator, search_memory, search_documents], SYSTEM_PROMPT))
+

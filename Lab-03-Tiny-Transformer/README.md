@@ -9,8 +9,8 @@ Build a small GPT-style Transformer from scratch in PyTorch, train it on the Tin
 ## Setup
 - Google Colab with a GPU runtime
 - PyTorch, Hugging Face `datasets`, pandas, matplotlib, Gradio
-- Notebook: [notebook/Lab03_Tiny_Transformer.ipynb](notebook/Lab03_Tiny_Transformer.ipynb)
-- Saved model settings: [tinystories_gpt_config.json](tinystories_gpt_config.json) (the 42.6 MB weights file is not in the repo)
+- Notebook: [notebooks/Lab03_Tiny_Transformer.ipynb](notebooks/Lab03_Tiny_Transformer.ipynb)
+- Saved model settings: [tinystories_gpt_config.json](results/tinystories_gpt_config.json) (the 42.6 MB weights file is not in the repo)
 
 ## Implementation
 - **Data:** 20,000 TinyStories for training and 1,000 different stories for validation, streamed from Hugging Face. Stories are cleaned to plain ASCII and joined with an end-of-story character
@@ -88,7 +88,8 @@ The mechanisms below are the ones that matter most in my model. For each one I s
 - How temperature and top-k sampling change generated text
 
 ## Screenshots
-![loss curves](screenshots/loss%20curves.png)
-![story generator](screenshots/story%20generator.png)
-![story lenght](screenshots/story%20lenght.png)
+![loss curves](results/loss%20curves.png)
+![story generator](results/story%20generator.png)
+![story lenght](results/story%20lenght.png)
+
 

@@ -9,7 +9,7 @@ Build an AI agent on a local LLM (Llama 3.2 3B via Ollama) that decides when to 
 ## Setup
 - Python 3.12 environment (the same `rag_env` as Lab 05), libraries in LangChain (`langchain-core`, `langchain-ollama`), `pyautogui`, `pygetwindow`, and the Google API client libraries
 - Ollama running `llama3.2:3b`
-- Part C needs the Lab 05 vector database (`../Lab-05-RAG/chroma_db`), built with `python ingest.py`
+- Part C needs the Lab 05 vector database (`../Lab-05-RAG-Pipeline/chroma_db`), built with `python ingest.py`
 - Part D needs your own Google Cloud OAuth `credentials.json` (not included in the repo). The first run opens a browser login and creates `token.json`
 - Run any part with `python <file>.py` from this folder
 
@@ -70,3 +70,4 @@ Screenshots are at the bottom of this page.
 ![computer specs](screenshots/computer%20specs.png)
 ![create text file](screenshots/create%20text%20file.png)
 ![memory agent](screenshots/memory%20agent.png)
+
