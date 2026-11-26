@@ -35,7 +35,6 @@ Test document: the PUSL3205 assessment brief (15 pages, 48 chunks).
 
 Retrieval distances (lower = closer): the refused question had the highest distances (1.32 - 1.45); answerable questions were 0.89 - 1.22. Only three questions were tested, so this is a pattern to investigate, not a conclusion.
 
-TODO: add screenshots from `screenshots/` and the extra test questions.
 
 ## Observations
 - The pipeline answered from the document and refused a question that was not in it.
