@@ -65,7 +65,17 @@ Final evaluation: validation loss 0.679, perplexity 1.97 per character (random g
 - Limits: character-level tokens, one run per setting, no quality measure other than loss and my own reading of samples.
 
 ## Discussion: mechanisms that improve performance
-TODO (write in my own words, with where each one is in the code and whether my experiments tested it).
+The mechanisms below are the ones that matter most in my model. For each one I say where it is in the code and whether my own experiments tested it, or whether it is standard theory that I did not test.
+
+- **Causal mask (not tested).** In `SelfAttention.forward`, `masked_fill` with `-inf` before the softmax gives future characters zero weight. Without it the model could read the very character it is supposed to predict, so training would look good but generation, where there is no future, would fail. I did not train without it.
+- **Multi-head attention (tested).** `n_head` splits the 384 dimensions into separate heads that each compute their own attention pattern, so different heads can focus on different relationships between characters. With the same number of parameters, 6 heads reached a validation loss of 0.865 and 1 head reached 0.934. This was one run with one seed, so I cannot say how big the real difference is.
+- **Position embeddings (not tested).** `pos_emb` is added to the token embeddings. Attention alone treats the input as a set and has no sense of order, so without positions the model could not tell where a character is in the sentence.
+- **Residual connections and layer normalisation (not tested).** Each block does `x = x + self.attn(self.ln1(x))`. The addition gives gradients a direct path through all 6 blocks, and layer norm keeps the values at a stable scale. Training stayed smooth with no loss spikes at a learning rate of 1e-3, which fits this, but I did not train without them to compare.
+- **Feed-forward layers (not tested).** Attention mixes information between positions, and the feed-forward layer (a 4 times wider layer with GELU) then processes each position on its own, adding non-linear capacity.
+- **Training tricks (not tested individually).** Learning-rate warm-up with cosine decay, gradient clipping at 1.0, AdamW with weight decay and mixed precision. The loss curve fell smoothly and the whole run took 9.1 minutes, but I did not switch any of these off to measure its effect.
+- **Dropout (not tested).** Dropout of 0.1 is used in attention, in the residual paths and in the feed-forward layer. Training loss (0.671) and validation loss (0.679) stayed almost equal, so there was no overfitting, but after only about 2.7 passes over the data it may not have been needed, and I did not compare with no dropout.
+- **Temperature and top-k at generation (tested).** The three samples show the effect: at 0.5 the text is clean but repetitive, at 0.8 it is varied but loses the plot, and at 1.2 it invents words.
+- **Model size and training length (tested).** Validation loss was 1.594 for the 0.44M model, 1.011 for the 3.25M model and 0.865 for the 10.78M model. These runs changed layers, heads and width together, so I cannot credit the number of layers alone. Training for only 250 steps gave 1.611 compared with 0.865 at 1,000 steps, so training length mattered a lot.
 
 ## Challenges
 - The full TinyStories file is about 2 GB, so I used streaming mode and took only 20,000 stories.
@@ -81,3 +91,4 @@ TODO (write in my own words, with where each one is in the code and whether my e
 ![loss curves](screenshots/loss%20curves.png)
 ![story generator](screenshots/story%20generator.png)
 ![story lenght](screenshots/story%20lenght.png)
+
