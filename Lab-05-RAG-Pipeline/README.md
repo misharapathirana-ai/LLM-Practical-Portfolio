@@ -38,7 +38,7 @@ Retrieval distances (lower = closer): the refused question had the highest dista
 
 ## Observations
 - The pipeline answered from the document and refused a question that was not in it.
-- The incomplete deadline answer shows RAG can still miss details. TODO: state whether the date was in the retrieved chunks (retrieval problem) or in the chunks but ignored by the LLM (generation problem).
+- The incomplete deadline answer shows RAG can still miss details.
 - A 3B model running locally was slow (roughly 10 - 60 seconds per answer).
 
 ## Challenges
