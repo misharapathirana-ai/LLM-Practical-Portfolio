@@ -43,7 +43,7 @@ This module took me from classic machine learning to building and testing the pi
 I would test with more questions and several seeds, add a validation set to the fine-tuning lab, use embeddings instead of keyword search for the agent's memory, and measure retrieval quality in the RAG lab (for example Recall@k) instead of only reading answers.
 
 ## How I used AI assistance
-I used Claude (Anthropic's AI assistant) during the module for explanations, code drafts, debugging help and drafting the README text from my own results. I ran all code myself, on my laptop or on Colab, and the numbers, outputs and screenshots in this repository come from my runs.
+I used Claude (Anthropic's AI assistant) during the module for explanations, code drafts and debugging help. I ran all code myself, on my VS Code and on Colab, and the numbers, outputs and screenshots in this repository come from my runs.
 
 ## Looking ahead
 These results feed directly into my report on a university question-answering assistant: Lab 04 and Lab 05 together support grounding answers in documents with retrieval, with fine-tuning kept for tone and format.
