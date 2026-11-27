@@ -38,9 +38,9 @@ Screenshots are in the `screenshots/` folder.
 
 **Feature comparison.** With Logistic Regression, unigrams plus bigrams performed best (80.6% accuracy, F1 80.5%). Bigrams may have helped capture short phrases such as "not good". TF-IDF did not help (78.7% and 79.1%).
 
-**Positive and negative sentences.** Words only in the positive top list: best, excellent, great, love, well. Words only in the negative top list: bad, dont, even, time, would. TODO: add sentence-length result.
+**Positive and negative sentences.** Words only in the positive top list: best, excellent, great, love, well. Words only in the negative top list: bad, dont, even, time, would. 
 
-**Misclassified sentences.** The Linear SVM misclassified 121 of 597 test sentences (about 20.3%). Errors included negation, mixed opinions and context-dependent wording. TODO: add examples and checked explanations.
+**Misclassified sentences.** The Linear SVM misclassified 121 of 597 test sentences (about 20.3%). Errors included negation, mixed opinions and context-dependent wording. 
 
 **New sentences.** "Oh great, another delay. Just perfect." got P(positive) = 0.97 despite being sarcastic. "I did not hate it" got 0.08, so the model reacted to "hate" and ignored "not". "The film was fine I suppose" got 0.84, and the dataset has no neutral class.
 
